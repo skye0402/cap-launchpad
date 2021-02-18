@@ -1,30 +1,35 @@
 {
-  "name": "cap-launchpad",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/cds": "^4",
-    "express": "^4"
-  },
-  "devDependencies": {
-    "@sap/ux-specification": "^1.84.2",
-    "sqlite3": "5.0.0"
-  },
-  "scripts": {
-    "start": "cds run"
-  },
-  "cds": {
-    "requires": {
-      "db": {
-        "kind": "sqlite",
-        "model": "*"
-      }
-    }
-  },
-  "sapux": [
-    "app\\fiori"
-  ]
+    "name": "cap-launchpad",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^4",
+        "@sap/hana-client": "^2.6.61",
+        "@sap/ui5-builder-webide-extension": "^1.1.4",
+        "express": "^4"
+    },
+    "devDependencies": {
+        "@sap/ux-specification": "^1.84.2",
+        "@ui5/cli": "^2.10.0",
+        "sqlite3": "5.0.0"
+    },
+    "scripts": {
+        "start": "cds run"
+    },
+    "cds": {
+        "hana": {
+            "deploy-format": "hdbtable"
+        },
+        "requires": {
+            "db": {
+                "kind": "sql"
+            }
+        }
+    },
+    "sapux": [
+        "app/fiori"
+    ]
 }

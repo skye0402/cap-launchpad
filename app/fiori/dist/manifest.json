@@ -37,8 +37,8 @@
                     "subTitle": "",
                     "icon": ""
                 }
-            }   
-        }  
+            }
+        }
     },
     "sap.cloud": {
         "public": true,

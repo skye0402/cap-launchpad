@@ -8,14 +8,24 @@
         "sapui5"
     ],
     "main": "webapp/index.html",
-    "scripts": {
-        "deploy": "npx -p @sap/ux-ui5-tooling fiori add deploy-config cf"
-    },
-	"devDependencies": {
+    "devDependencies": {
         "@ui5/cli": "2.7.1",
         "@ui5/fs": "2.0.1",
         "@ui5/logger": "2.0.0",
         "@sap/ux-ui5-tooling": "1",
-        "@sap/ux-specification": "latest"
-}
+        "@sap/ux-specification": "latest",
+        "@sap/ui5-builder-webide-extension": "1.1.4",
+        "bestzip": "2.1.4",
+        "rimraf": "3.0.2"
+    },
+    "scripts": {
+        "build": "npm run clean && ui5 build --include-task=generateManifestBundle generateCachebusterInfo && npm run zip",
+        "zip": "cd dist && npx bestzip ../fiori-content.zip *",
+        "clean": "npx rimraf fiori-content.zip dist"
+    },
+    "ui5": {
+        "dependencies": [
+            "@sap/ui5-builder-webide-extension"
+        ]
+    }
 }
