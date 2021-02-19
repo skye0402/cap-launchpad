@@ -42,7 +42,7 @@
     },
     "sap.cloud": {
         "public": true,
-        "service": "<add service here>"
+        "service": "my_service"
     },
     "sap.ui": {
         "technology": "UI5",
