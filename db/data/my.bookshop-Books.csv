@@ -1,3 +1,8 @@
-ID;title;stock
-1;Wuthering Heights;100
-2;Jane Eyre;500
+ID;prodType;title;stock
+1;book;Wuthering Heights;100
+2;book;Jane Eyre;500
+3;newspaper;Financial Times;100
+4;newspaper;USA Today;50
+5;newspaper;Asahi Shinbun;150
+6;magazine;PC Magazine;20
+7;magazine;National Geographic;360

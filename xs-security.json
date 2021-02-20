@@ -6,14 +6,33 @@
       {
         "name": "uaa.user",
         "description": "UAA"
+      },
+      {
+        "name": "$XSAPPNAME.Display",
+        "description": "Display"
       }
     ],
+    "attributes": [{
+      "name": "prodType",
+      "description": "Media type",
+      "valueType": "string"
+    }],
     "role-templates": [
       {
         "name": "Token_Exchange",
         "description": "UAA",
         "scope-references": [
           "uaa.user"
+        ]
+      },
+      {
+        "name": "Display_role_template",
+        "description": "View the media listed.",
+        "scope-references": [
+          "$XSAPPNAME.Display"
+        ],
+        "attribute-references": [
+          "prodType"
         ]
       }
     ]

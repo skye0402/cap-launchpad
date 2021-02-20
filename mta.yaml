@@ -75,11 +75,15 @@ modules:
    type: nodejs
    path: gen/srv
    parameters:
-     memory: 256M
-     disk-quota: 1024M   
+     memory: 128M
+     disk-quota: 512M   
    requires:
     # Resources extracted from CAP configuration
     - name: cap-launchpad-db
+    - name: uaa_fiori
+      parameters:
+        service-key:
+        name: uaa_fiori-key
    provides:
     - name: srv-api      # required by consumers of CAP services (e.g. approuter)
       properties:
